@@ -7,9 +7,14 @@ using System.Web.UI.WebControls;
 
 namespace SalmaList
 {
-    public partial class GastosForm : System.Web.UI.Page
+    public partial class GastosList : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void GastosDataSource_Selecting(object sender, SqlDataSourceSelectingEventArgs e)
         {
 
         }
