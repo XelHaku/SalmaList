@@ -53,7 +53,7 @@ namespace SalmaList
                     com.Parameters.AddWithValue("@comments", TextBoxComment.Text);
 
                     com.ExecuteNonQuery();
-                    MessageLabel.Text = " Folio No" + TextBoxFolio.Text + " Registrado";
+                    MessageLabel.Text = " Folio No " + TextBoxFolio.Text + " Registrado";
 
 
                 }

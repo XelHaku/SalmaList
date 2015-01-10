@@ -170,8 +170,13 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="Gastos\GastosForm.aspx" />
-    <Content Include="Gastos\GastosList.aspx" />
+    <Content Include="StyleSheetCustom.css" />
+    <Content Include="Trafico\Diesel\DieselEdit.aspx" />
+    <Content Include="Trafico\Diesel\DieselForm.aspx" />
+    <Content Include="Trafico\Diesel\DieselList.aspx" />
+    <Content Include="Trafico\Gastos\GastosEdit.aspx" />
+    <Content Include="Trafico\Gastos\GastosForm.aspx" />
+    <Content Include="Trafico\Gastos\GastosList.aspx" />
     <Content Include="packages.config" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -211,6 +216,10 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Site.Master" />
+    <Content Include="Trafico\TraficoPage.aspx" />
+    <Content Include="Unidad\UnidadEdit.aspx" />
+    <Content Include="Unidad\UnidadList.aspx" />
+    <Content Include="Unidad\UnidadPage.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -355,18 +364,46 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Gastos\GastosForm.aspx.cs">
+    <Compile Include="Trafico\Diesel\DieselEdit.aspx.cs">
+      <DependentUpon>DieselEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Trafico\Diesel\DieselEdit.aspx.designer.cs">
+      <DependentUpon>DieselEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Trafico\Diesel\DieselForm.aspx.cs">
+      <DependentUpon>DieselForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Trafico\Diesel\DieselForm.aspx.designer.cs">
+      <DependentUpon>DieselForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Trafico\Diesel\DieselList.aspx.cs">
+      <DependentUpon>DieselList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Trafico\Diesel\DieselList.aspx.designer.cs">
+      <DependentUpon>DieselList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Trafico\Gastos\GastosEdit.aspx.cs">
+      <DependentUpon>GastosEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Trafico\Gastos\GastosEdit.aspx.designer.cs">
+      <DependentUpon>GastosEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Trafico\Gastos\GastosForm.aspx.cs">
       <DependentUpon>GastosForm.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Gastos\GastosForm.aspx.designer.cs">
+    <Compile Include="Trafico\Gastos\GastosForm.aspx.designer.cs">
       <DependentUpon>GastosForm.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Gastos\GastosList.aspx.cs">
+    <Compile Include="Trafico\Gastos\GastosList.aspx.cs">
       <DependentUpon>GastosList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Gastos\GastosList.aspx.designer.cs">
+    <Compile Include="Trafico\Gastos\GastosList.aspx.designer.cs">
       <DependentUpon>GastosList.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
@@ -389,6 +426,34 @@
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
+    <Compile Include="Trafico\TraficoPage.aspx.cs">
+      <DependentUpon>TraficoPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Trafico\TraficoPage.aspx.designer.cs">
+      <DependentUpon>TraficoPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Unidad\UnidadEdit.aspx.cs">
+      <DependentUpon>UnidadEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Unidad\UnidadEdit.aspx.designer.cs">
+      <DependentUpon>UnidadEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Unidad\UnidadList.aspx.cs">
+      <DependentUpon>UnidadList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Unidad\UnidadList.aspx.designer.cs">
+      <DependentUpon>UnidadList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Unidad\UnidadPage.aspx.cs">
+      <DependentUpon>UnidadPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Unidad\UnidadPage.aspx.designer.cs">
+      <DependentUpon>UnidadPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

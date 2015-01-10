@@ -1,7 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="GastosList.aspx.cs" Inherits="SalmaList.GastosList" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
-
+    <br>
+    <h3>Listado de Gastos</h3>
+    <br>
     <asp:GridView ID="GridView1" runat="server" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="ID_Folio" DataSourceID="GastosDataSource" AllowPaging="True" CellPadding="4" ForeColor="#333333" GridLines="None">
         <AlternatingRowStyle BackColor="White" />
     <Columns>
@@ -20,7 +22,9 @@
         <asp:BoundField DataField="ENTREGO" HeaderText="ENTREGO" SortExpression="ENTREGO" />
         <asp:BoundField DataField="AUTORIZADO" HeaderText="AUTORIZADO" SortExpression="AUTORIZADO" />
         <asp:BoundField DataField="RECIBIDO" HeaderText="RECIBIDO" SortExpression="RECIBIDO" />
-        <asp:BoundField DataField="COMMENTS" HeaderText="COMMENTS" SortExpression="COMMENTS" />
+        <asp:BoundField DataField="COMMENTS" HeaderText="COMENTARIOS" SortExpression="COMMENTS" >
+        <HeaderStyle Width="50px" />
+        </asp:BoundField>
     </Columns>
         <EditRowStyle BackColor="#2461BF" />
         <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />

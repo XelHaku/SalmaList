@@ -1,13 +1,13 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="GastosForm.aspx.cs" Inherits="SalmaList.GastosForm" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    
+    <h2>Vale de Gastos</h2><br>
     
     <div>
     
         <table cellpadding="7" cellspacing="7" class="auto-style1" style="width:900PX">
               <tr>
-                <td class="text-right" style="width: 157px; font-size: large;">FOLIO*</td>
-                <td class="auto-style5" style="width: 326px">
+                <td class="formBox" style="width: 103px; font-size: large;">FOLIO*</td>
+                <td class="formBox2" style="width: 180px">
                     
 
                     <asp:TextBox ID="TextBoxFolio" runat="server" Width="180px"></asp:TextBox>
@@ -19,64 +19,43 @@
                   </td>
             </tr>
             <tr>
-                <td class="text-right" style="width: 157px; font-size: large;">UNIDAD*</td>
-                <td class="auto-style5" style="width: 326px">
-                    <asp:DropDownList ID="DropListUnit" runat="server" Width="250px" OnSelectedIndexChanged="DropListUnit_SelectedIndexChanged">
-                        <asp:ListItem></asp:ListItem>
-                        <asp:ListItem>TS-01 PR-3892</asp:ListItem>
-                        <asp:ListItem>TS-02 PR-3894</asp:ListItem>
-                        <asp:ListItem>TS-03 PR-2074</asp:ListItem>
-                        <asp:ListItem>TS-04 PR-1035</asp:ListItem>
-                        <asp:ListItem>TS-05 PR-3895</asp:ListItem>
-                        <asp:ListItem>TS-06 PR-1023</asp:ListItem>
-                        <asp:ListItem>TS-07 PR-3893</asp:ListItem>
-                        <asp:ListItem>TS-08 PR-3891</asp:ListItem>
-                        <asp:ListItem>TS-09 PR-1043</asp:ListItem>
-                        <asp:ListItem>TS-10 PR-1029</asp:ListItem>
-                        <asp:ListItem>TS-13 PP-0485</asp:ListItem>
-                        <asp:ListItem>TS-137 PR-1044</asp:ListItem>
-                        <asp:ListItem>TS-138 PR-1619</asp:ListItem>
-                        <asp:ListItem>TS-139 PR-1028</asp:ListItem>
-                        <asp:ListItem>TS-14 PR-1031</asp:ListItem>
-                        <asp:ListItem>TS-140 PP-0742</asp:ListItem>
-                        <asp:ListItem>TS-141 PP-0487</asp:ListItem>
-                        <asp:ListItem>TS-142 PP-2073</asp:ListItem>
-                        <asp:ListItem>TS-145 PR-1039</asp:ListItem>
-                        <asp:ListItem>TS-146 PP-2075</asp:ListItem>
-                        <asp:ListItem>TS-149 PR-3896</asp:ListItem>
-                        <asp:ListItem>TS-15 PR-1041</asp:ListItem>
-                        <asp:ListItem>TS-152 PR-1621</asp:ListItem>
-                        <asp:ListItem>TS-153 PP-0489</asp:ListItem>
+                <td class="formBox" style="width: 103px; font-size: large;">UNIDAD*</td>
+                <td class="formBox2" style="width: 180px">
+                    <asp:DropDownList ID="DropListUnit" runat="server" Width="250px" OnSelectedIndexChanged="DropListUnit_SelectedIndexChanged" DataSourceID="UnidadDataSource" DataTextField="UNIDAD" DataValueField="UNIDAD">
                     </asp:DropDownList>
+                    <asp:SqlDataSource ID="UnidadDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:GASTOS_ConnectionString %>" SelectCommand="SELECT [UNIDAD] FROM [UnidadTable]"></asp:SqlDataSource>
                 </td>
                 <td class="auto-style7" style="width: 321px">
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="DropListUnit" ErrorMessage="Unidad requerida" style="color: #FF0000"></asp:RequiredFieldValidator>
                 </td>
             </tr>
             <tr>
-                <td class="text-right" style="width: 157px; font-size: large;">FECHA*</td>
-                <td class="auto-style5" style="width: 326px">
-                    <asp:Calendar ID="CalendarFecha" runat="server" SelectedDate="01/07/2015 11:24:31" VisibleDate="2015-01-07" Width="250px"></asp:Calendar>
+                <td class="formBox" style="width: 103px; font-size: large;">FECHA*</td>
+                <td class="formBox2" style="width: 180px">
+                    <asp:Calendar ID="CalendarFecha" runat="server" SelectedDate="01/07/2015 11:24:31" VisibleDate="2015-01-07" Width="250px">
+                        <DayHeaderStyle ForeColor="White" />
+                        <DayStyle ForeColor="White" />
+                    </asp:Calendar>
                 </td>
                 <td class="auto-style7" style="width: 321px">&nbsp;</td>
             </tr>
             <tr>
-                <td class="text-right" style="width: 157px; font-size: large;">CASETAS</td>
-                <td class="auto-style5" style="width: 326px">
+                <td class="formBox" style="width: 103px; font-size: large;">CASETAS</td>
+                <td class="formBox2" style="width: 180px">
                     <asp:TextBox ID="TextBoxCasetas" runat="server" Width="150px"></asp:TextBox>
                 </td>
                 <td class="auto-style7" style="color: #FF0000; width: 321px">&nbsp;</td>
             </tr>
             <tr>
-                <td class="text-right" style="width: 157px; font-size: large;">GASTOS MUERTOS </td>
-                <td class="auto-style5" style="width: 326px">
+                <td class="formBox" style="width: 103px; font-size: large;">GASTOS MUERTOS </td>
+                <td class="formBox2" style="width: 180px">
                     <asp:TextBox ID="TextBoxMuertos" runat="server" Width="150px"></asp:TextBox>
                 </td>
                 <td class="auto-style7" style="color: #FF0000; width: 321px">&nbsp;</td>
             </tr>
             <tr>
-                <td class="text-right" style="width: 157px; font-size: large;">ORIGEN*</td>
-                <td class="auto-style5" style="width: 326px">
+                <td class="formBox" style="width: 103px; font-size: large;">ORIGEN*</td>
+                <td class="formBox2" style="width: 180px">
                     <asp:DropDownList ID="DropListOrigen" runat="server" Width="250px">
                         <asp:ListItem></asp:ListItem>
                         <asp:ListItem>CADEREYTA</asp:ListItem>
@@ -92,8 +71,8 @@
                 </td>
             </tr>
             <tr>
-                <td class="text-right" style="width: 157px; font-size: large;">DESTINO*</td>
-                <td class="auto-style5" style="width: 326px">
+                <td class="formBox" style="width: 103px; font-size: large;">DESTINO*</td>
+                <td class="formBox2" style="width: 180px">
                     <asp:DropDownList ID="DropListDestino" runat="server" Width="250px">
                         <asp:ListItem></asp:ListItem>
                         <asp:ListItem>AGUASCALIENTES</asp:ListItem>
@@ -119,8 +98,8 @@
                 </td>
             </tr>
             <tr>
-                <td class="text-right" style="width: 157px; font-size: large;">PRODUCTO*</td>
-                <td class="auto-style5" style="width: 326px">
+                <td class="formBox" style="width: 103px; font-size: large;">PRODUCTO*</td>
+                <td class="formBox2" style="width: 180px">
                     <asp:DropDownList ID="DropListProducto" runat="server" Width="250px">
                         <asp:ListItem></asp:ListItem>
                         <asp:ListItem>MAGNA</asp:ListItem>
@@ -128,6 +107,7 @@
                         <asp:ListItem>COMBUSTOLEO</asp:ListItem>
                         <asp:ListItem>CONTAMINADO</asp:ListItem>
                         <asp:ListItem>PREMIUM</asp:ListItem>
+                        <asp:ListItem>ACEITE CICLICO</asp:ListItem>
                     </asp:DropDownList>
                 </td>
                 <td class="auto-style7" style="width: 321px">
@@ -135,8 +115,8 @@
                 </td>
             </tr>
             <tr>
-                <td class="text-right" style="width: 157px; font-size: large;">OPERADOR*</td>
-                <td class="auto-style6" style="width: 326px">
+                <td class="formBox" style="width: 103px; font-size: large;">OPERADOR*</td>
+                <td class="formBox2" style="width: 180px">
                     <asp:DropDownList ID="DropListOperador" runat="server" Width="250px">
                         <asp:ListItem></asp:ListItem>
                         <asp:ListItem>NOE AGUIRRE</asp:ListItem>
@@ -168,41 +148,41 @@
                 </td>
             </tr>
             <tr>
-                <td class="text-right" style="width: 157px; font-size: large;">ENTREGO</td>
-                <td class="auto-style5" style="width: 326px">
+                <td class="formBox" style="width: 103px; font-size: large;">ENTREGO</td>
+                <td class="formBox2" style="width: 180px">
                     <asp:TextBox ID="TextBoxEntrego" runat="server" Width="250px"></asp:TextBox>
                 </td>
                 <td class="auto-style7" style="color: #FF0000; width: 321px">&nbsp;</td>
             </tr>
             <tr>
-                <td class="text-right" style="width: 157px; font-size: large;">AUTORIZADO</td>
-                <td class="auto-style5" style="width: 326px">
+                <td class="formBox" style="width: 103px; font-size: large;">AUTORIZADO</td>
+                <td class="formBox2" style="width: 180px">
                     <asp:TextBox ID="TextBoxAutorizado" runat="server" Width="250px"></asp:TextBox>
                 </td>
                 <td class="auto-style7" style="width: 321px">&nbsp;</td>
             </tr>
             <tr>
-                <td class="text-right" style="width: 157px; font-size: large;">RECIBIDO</td>
-                <td class="auto-style5" style="width: 326px">
+                <td class="formBox" style="width: 103px; font-size: large; text-align: right;">RECIBIDO</td>
+                <td class="formBox2" style="width: 180px">
                     <asp:TextBox ID="TextBoxRecibido" runat="server" Width="250px"></asp:TextBox>
                 </td>
                 <td class="auto-style7" style="width: 321px">&nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style3" style="width: 157px; font-size: large; height: 35px; text-align: right;">Comentario</td>
-                <td class="auto-style5" style="height: 35px; width: 326px">
+                <td class="formBox" style="width: 103px; font-size: large; height: 35px; text-align: right;">Comentario</td>
+                <td class="formBox2" style="height: 35px; width: 180px">
                     <asp:TextBox ID="TextBoxComment" runat="server" Width="250px"></asp:TextBox>
                 </td>
                 <td class="auto-style7" style="height: 35px; width: 321px;"></td>
             </tr>
             <tr>
-                <td class="auto-style3" style="width: 157px">* Campos obligatorios</td>
-                <td class="auto-style5" style="width: 326px">&nbsp;</td>
+                <td class="formBox" style="width: 103px">&nbsp;</td>
+                <td class="formBox2" style="width: 180px">* Campos obligatorios</td>
                 <td class="auto-style7" style="width: 321px">&nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style3" style="width: 157px">&nbsp;</td>
-                <td class="auto-style5" style="width: 326px">&nbsp;</td>
+                <td class="auto-style3" style="width: 103px">&nbsp;</td>
+                <td class="auto-style5" style="width: 180px">&nbsp;</td>
                 <td class="auto-style7" style="width: 321px">&nbsp;</td>
             </tr>
         </table>
@@ -212,7 +192,7 @@
     <div> 
 
 
-        <asp:Button ID="SaveGastosButton" runat="server" Height="60px" OnClick="Button1_Click" Text="Guardar" Width="120px" />
+        <asp:Button ID="SaveGastosButton" runat="server" Height="60px" OnClick="Button1_Click" Text="Guardar" Width="175px" CssClass="BlueButton" />
 
 
     </div>

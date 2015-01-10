@@ -7,27 +7,27 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SalmaList {
+namespace SalmaList.Trafico.Gastos {
     
     
-    public partial class _Default {
+    public partial class GastosEdit {
         
         /// <summary>
-        /// TraficoButton control.
+        /// GridView1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button TraficoButton;
+        protected global::System.Web.UI.WebControls.GridView GridView1;
         
         /// <summary>
-        /// UnidadButton control.
+        /// GastosEditDataSource control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button UnidadButton;
+        protected global::System.Web.UI.WebControls.SqlDataSource GastosEditDataSource;
     }
 }
