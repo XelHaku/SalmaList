@@ -10,6 +10,7 @@
          
          <li><a runat="server" href="~/Trafico/Gastos/GastosEdit"><h3>Edicion de Gastos</h3></a>  <h6>Cambios y eliminacion de registros</h6></li>
          
+         <li><a runat="server" href="~/Trafico/Gastos/GastosSearch"><h3 style="color:gray">Busqueda de Gastos</h3></a>  <h6>Filtros de base datos (Funcion no disponible)</h6></li>
          </ul>
          <br><br>
          <ul>             
@@ -20,7 +21,7 @@
 
          <li><a runat="server" href="~/Trafico/Diesel/DieselEdit"><h3>Edicion de Diesel</h3></a>  <h6>Cambios y eliminacion de registros</h6></li>
 
-
+         <li><a runat="server" href="~/Trafico/Diesel/DieselSearch"><h3 style="color:gray">Busqueda de Diesel</h3></a>  <h6>Filtros de base datos (Funcion no disponible)</h6></li>
 
 
         </ul>

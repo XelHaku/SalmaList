@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SalmaList.Account
+namespace SalmaList.Trafico.Gastos
 {
 
 
-    public partial class Lockout
+    public partial class GastosSearch
     {
     }
 }

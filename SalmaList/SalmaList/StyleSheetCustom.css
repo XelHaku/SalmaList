@@ -53,4 +53,12 @@ color:#FFFFFF;
   background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
   text-decoration: none;
 }
-/*GASTOS FORM*/     
+/*GASTOS FORM*/
+
+.textboxLogin {
+width:200px;
+height:30px;
+padding:10px;
+margin:10px;
+font-size:medium;
+}

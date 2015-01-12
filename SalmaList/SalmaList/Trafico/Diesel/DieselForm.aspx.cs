@@ -19,12 +19,12 @@ namespace SalmaList.Trafico.Diesel
         
 
         protected void SaveDieselButton_Click(object sender, EventArgs e)
-        {/*
+        {
             MessageLabelDiesel.Text = "";
              try
-             {SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["DIESEL_ConnectionString"].ConnectionString);
+             {SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["GASTOS_ConnectionString"].ConnectionString);
                 conn.Open();
-                string strFolio = "select count(*) from DieselTable where ID_Folio='" + TextBoxFolioDiesel.Text + "'";
+                string strFolio = "select count(*) from DieselTable where ID_FolioDiesel='" + TextBoxFolioDiesel.Text + "'";
                 SqlCommand com1 = new SqlCommand(strFolio, conn);
                 int temp = Convert.ToInt32(com1.ExecuteScalar().ToString());
 
@@ -39,7 +39,7 @@ namespace SalmaList.Trafico.Diesel
 
 
 
-                    string insertQuery = "insert into DieselTable (ID_Folio, UNIDAD, FECHA,LITROS,CANTIDAD,ORIGEN,DESTINO,OPERADOR,ENTREGO,AUTORIZADO,RECIBIDO,COMMENTS) values (@folio,@unidad,@fecha,@litros,@cantidad,@origen,@destino,@operador,@entrego,@autorizado,@recibido,@comments)";
+                    string insertQuery = "insert into DieselTable (ID_FolioDiesel, UNIDAD, FECHA,LITROS,CANTIDAD,ORIGEN,DESTINO,OPERADOR,ENTREGO,AUTORIZADO,RECIBIDO,COMMENTS) values (@folio,@unidad,@fecha,@litros,@cantidad,@origen,@destino,@operador,@entrego,@autorizado,@recibido,@comments)";
 
                     SqlCommand com = new SqlCommand(insertQuery, conn);
                     com.Parameters.AddWithValue("@folio", TextBoxFolioDiesel.Text);
@@ -70,7 +70,7 @@ namespace SalmaList.Trafico.Diesel
                  Response.Write("Error:"+ex);
              }
 
-            */
+            
         }
     }
 }
