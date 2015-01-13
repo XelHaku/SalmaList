@@ -21,12 +21,12 @@ namespace SalmaList
 
         protected void TraficoButton_Click(object sender, EventArgs e)
         {
-            Response.Redirect("/Trafico/TraficoPage.aspx", false);
+            Response.Redirect("~/Trafico/TraficoPage.aspx", false);
         }
 
         protected void UnidadButton_Click(object sender, EventArgs e)
         {
-            Response.Redirect("/Unidad/UnidadPage.aspx", false);
+            Response.Redirect("~/Unidad/UnidadPage.aspx", false);
         }
 
     

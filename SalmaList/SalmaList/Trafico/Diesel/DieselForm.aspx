@@ -111,31 +111,9 @@
             <tr>
                 <td class="formBox" style="width: 103px; font-size: large;">OPERADOR*</td>
                 <td class="formBox2" style="width: 180px">
-                    <asp:DropDownList ID="DropListOperadorDiesel" runat="server" Width="250px">
-                        <asp:ListItem></asp:ListItem>
-                        <asp:ListItem>NOE AGUIRRE</asp:ListItem>
-                        <asp:ListItem>JOEL CELSO BAEZ</asp:ListItem>
-                        <asp:ListItem>JUAN MANUEL CASARES</asp:ListItem>
-                        <asp:ListItem>FERNANDO CASILLAS</asp:ListItem>
-                        <asp:ListItem>FELIPE CEDILLO</asp:ListItem>
-                        <asp:ListItem>FELIPE COSS</asp:ListItem>
-                        <asp:ListItem>ENCARNACION DE LEON</asp:ListItem>
-                        <asp:ListItem>OSCAR ADOLFO GZZ</asp:ListItem>
-                        <asp:ListItem>JUAN CARLOS HERNANDEZ</asp:ListItem>
-                        <asp:ListItem>JULIO JARAMILLO</asp:ListItem>
-                        <asp:ListItem>RUBEN JASSO</asp:ListItem>
-                        <asp:ListItem>LUIS LUNA</asp:ListItem>
-                        <asp:ListItem>TEODORO MARTINEZ</asp:ListItem>
-                        <asp:ListItem>ARTURO MERAZ</asp:ListItem>
-                        <asp:ListItem>JOSE CARLOS MONDRAGON</asp:ListItem>
-                        <asp:ListItem>ADRIAN OLVERA</asp:ListItem>
-                        <asp:ListItem>JOSE ALFREDO PORRAS</asp:ListItem>
-                        <asp:ListItem>FEDERICO QUINTANA</asp:ListItem>
-                        <asp:ListItem>HUMBERTO ROBLES</asp:ListItem>
-                        <asp:ListItem>RAMIRO SALAZAR</asp:ListItem>
-                        <asp:ListItem>GUADALUPE VALDEZ</asp:ListItem>
-                        <asp:ListItem>CONEPCION VILLAREAL</asp:ListItem>
+                    <asp:DropDownList ID="DropListOperadorDiesel" runat="server" DataSourceID="SqlDataSource2" DataTextField="OPERADOR" DataValueField="OPERADOR" Width="250px">
                     </asp:DropDownList>
+                    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:GASTOS_ConnectionString %>" SelectCommand="SELECT [OPERADOR] FROM [UnidadTable] ORDER BY [OPERADOR]"></asp:SqlDataSource>
                 </td>
                 <td class="auto-style2" style="width: 321px; color: #FF0000;">
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="DropListOperadorDiesel" ErrorMessage="Operador requerido"></asp:RequiredFieldValidator>
